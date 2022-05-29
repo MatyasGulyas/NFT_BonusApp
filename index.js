@@ -34,7 +34,7 @@ db.count({}, function (err, count) {
 // });
 
 
-app.post('/api', (request, response) => {
+app.post('/', (request, response) => {
     console.log('I got a request!');
     let data = request.body;
     let timestamp = Date.now();
