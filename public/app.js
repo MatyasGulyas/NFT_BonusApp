@@ -28,7 +28,7 @@ async function submitSecret() {
         body: JSON.stringify(userSecretDb)
     };
 
-    const response = await fetch('/api', options);
+    const response = await fetch('/', options);
     const data = await response.json();
     console.log(data);
 
