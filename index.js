@@ -4,8 +4,9 @@ const fs = require('fs');
 const nodemailer = require('nodemailer');
 const app = express();
 const Datastore = require('nedb');
+const port = process.env.PORT || 5000;
 
-app.listen(8080, () => console.log('listening at 8080'));
+app.listen(port, () => console.log('listening at 5000'));
 app.use(express.static('public'));
 app.use(express.json({ limit: '1mb' }));
 
