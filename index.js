@@ -2,12 +2,16 @@ const { response } = require('express');
 const express = require('express');
 const fs = require('fs');
 const nodemailer = require('nodemailer');
+const ejs = require('ejs');
 const app = express();
 const Datastore = require('nedb');
 const port = process.env.PORT || 5000;
 
+app.use(express.static(__dirname + '/public'));
+app.set('view engine', 'ejs');
+
 app.listen(port, () => console.log('listening at 5000'));
-app.use(express.static('public'));
+// app.use(express.static('public'));
 app.use(express.json({ limit: '1mb' }));
 
 const db = new Datastore('database.db');
@@ -33,9 +37,15 @@ db.count({}, function (err, count) {
 //         response.json(data)
 //     });
 // });
+app.get('/', function (req, res) {
+    res.render('pages/index');
+});
 
+app.get('/bonus', function (req, res) {
+    res.render('pages/bonus');
+});
 
-app.post('/', (request, response) => {
+app.post('/bonus', (request, response) => {
     console.log('I got a request!');
     let data = request.body;
     let timestamp = Date.now();
@@ -134,14 +144,13 @@ function sendResponse() {
         from: 'guma.prog@gmail.com',
         to: data.userMail,
         subject: `Thank You for Your Purchase!! - Your NFT is on the way ;)`,
-        text: `Dear ${data.firstName} ${data.familyName}!
-
-                We have recieved your datas to accomplish the sending.
-                Your NFT would be send to you as soon as possible
-                We will inform you if we know the estimated delivery time depending on your location.
+        text: `Dear ${data.firstName} ${data.familyName}
+        We have recieved your datas to accomplish the sending.
+        Your NFT would be send to you as soon as possible
+        We will inform you if we know the estimated delivery time depending on your location.
                 
-                Sincirely, 
-                Papp Lajos Máté `
+        Sincirely, 
+        Papp Lajos Máté `
     };
 
     transporter.sendMail(mailOptions, function (error, info) {

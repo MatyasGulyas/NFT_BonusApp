@@ -1,0 +1,107 @@
+:root {
+    --rotation-pos: 10deg;
+    --rotation-neg: -10deg;
+
+  }
+
+.divider-animated img {
+    animation:linear infinite;
+    animation-name:run;
+    animation-duration: 20s;
+ }
+
+
+ @keyframes run  {
+    0% {
+       margin-left:0;
+       -webkit-transform:rotateZ(deg);
+    }
+
+    5% {
+        -webkit-transform:rotateZ(var(--rotation-pos));
+    }
+
+    10% {
+        -webkit-transform:rotateZ(var(--rotation-neg));
+    }
+    15% {
+        -webkit-transform:rotateZ(var(--rotation-pos));
+    }
+
+    20% {
+        -webkit-transform:rotateZ(var(--rotation-neg));
+    }
+    25% {
+        -webkit-transform:rotateZ(var(--rotation-pos));
+    }
+
+    30% {
+        -webkit-transform:rotateZ(var(--rotation-neg));
+    }
+    35% {
+        -webkit-transform:rotateZ(var(--rotation-pos));
+    }
+
+    40% {
+        -webkit-transform:rotateZ(var(--rotation-neg));
+    }
+
+    45% {
+        -webkit-transform:rotateZ(var(--rotation-pos));
+    }
+    
+    50% {
+       margin-left: 95%;
+       -webkit-transform:rotateZ(var(--rotation-neg));
+    }
+
+    51% {
+        -webkit-transform:rotateZ(var(180deg));
+
+     }
+
+    55% {
+        margin-left:95%;
+        -webkit-transform:rotateZ(calc(180deg + var(--rotation-pos)));
+    }
+
+    60% {
+        -webkit-transform:rotateZ(calc(180deg + var(--rotation-neg)));
+    }
+    65% {
+        -webkit-transform:rotateZ(calc(180deg + var(--rotation-pos)));
+    }
+
+    70% {
+        -webkit-transform:rotateZ(calc(180deg + var(--rotation-neg)));
+    }
+    75% {
+        -webkit-transform:rotateZ(calc(180deg + var(--rotation-pos)));
+    }
+
+    80% {
+        -webkit-transform:rotateZ(calc(180deg + var(--rotation-neg)));
+    }
+    85% {
+        -webkit-transform:rotateZ(calc(180deg + var(--rotation-pos)));
+    }
+
+    90% {
+        -webkit-transform:rotateZ(calc(180deg + var(--rotation-neg)));
+    }
+    
+    95% {
+        -webkit-transform:rotateZ(calc(180deg + var(--rotation-pos)));
+     }
+
+    96% {
+        margin-left: 0%;
+        -webkit-transform:rotateZ(calc(180deg + var(--rotation-neg)));
+     }
+ 
+     100% {
+         -webkit-transform:rotateZ(var(180deg));
+ 
+      }
+ 
+ }

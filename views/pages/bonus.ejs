@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/bonuspage.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Reenie+Beanie&display=swap" rel="stylesheet">
+    <title>Bonus Page</title>
+</head>
+
+<body>
+    <h1>Get Your Bonus!!</h1>
+
+    <div class="imgList">
+
+    </div>
+
+    <form class="inputList">
+        <!-- Ide jönnek az inputok, ha egyezik a secret a DB-vel  -->
+
+        <!-- KABBEAFASZOM!!!!!!! -->
+
+        <label for="firstName">First Name</label>
+        <input id="firstName" name="firstName" type="text" required>
+
+        <label for="familyName">Family Name</label>
+        <input id="familyName" name="familyName" type="text" required>
+
+        <label for="mail">E-mail address</label>
+        <input id="mail" name="mail" type="email" required>
+
+        <label for="country">Country</label>
+        <input id="country" name="country" type="text" required>
+
+        <label for="zipCode">Zip/Postal Code</label>
+        <input id="zipCode" name="zipCode" type="text" required>
+
+        <label for="city">City</label>
+        <input id="city" name="city" type="text" required>
+
+        <label for="address">Address (Str./Nr.)</label>
+        <input id="address" name="address" type="text" required>
+
+        <button id="submit" onclick="submitData()">SubmitData</button>
+
+    </form>
+
+    <input id="secret" type="text" placeholder="Secret Key...">
+
+
+    <button id="submitSecret" onclick="submitSecret()">Submit</button>
+
+    <div class="wrongSecret">
+        <p>Secret is Wrong!<br>Please Try Again...</p>
+    </div>
+
+    <div class="usedSecret">
+        <p>This Secret Code is Used!</p>
+    </div>
+
+    <div class="response">
+        <p>Thank You!<br>We sent You a mail!<br>Check this for more details...</p>
+    </div>
+
+    <div class="responseFailed">
+        <p>Something went wrong!<br>Please Try Again, or Contact Us on xy@zmail.com</p>
+    </div>
+
+    <script src="./js/app.js"></script>
+</body>
+
+</html>
