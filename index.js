@@ -93,7 +93,7 @@ app.post('/datas', (request, response) => {
 
     let mailOptions = {
         from: 'guma.prog@gmail.com',
-        to: 'matyas.gulyas92@gmail.com',
+        to: 'guma.prog@gmail.com',
         subject: `Incoming message from ${data.firstName}`,
         text: `${data.firstName} ${data.familyName} has activated the secret code to her/his NFT
         Necessary datas to accomplish the shipping: 
