@@ -86,14 +86,14 @@ app.post('/datas', (request, response) => {
     let transporter = nodemailer.createTransport({
         service: 'gmail',
         auth: {
-            user: 'matyas.gulyas92@gmail.com',
-            pass: 'G19920601m'
+            user: 'guma.prog@gmail.com',
+            pass: '!`MDy,5PW__2C'
         }
     });
 
     let mailOptions = {
-        from: 'matyas.gulyas92@gmail.com',
-        to: 'guma.prog@gmail.com',
+        from: 'guma.prog@gmail.com',
+        to: 'matyas.gulyas92@gmail.com',
         subject: `Incoming message from ${data.firstName}`,
         text: `${data.firstName} ${data.familyName} has activated the secret code to her/his NFT
         Necessary datas to accomplish the shipping: 
@@ -125,13 +125,13 @@ function sendResponse() {
     let transporter = nodemailer.createTransport({
         service: 'gmail',
         auth: {
-            user: 'matyas.gulyas92@gmail.com',
-            pass: 'G19920601m'
+            user: 'guma.prog@gmail.com',
+            pass: '!`MDy,5PW__2C'
         }
     });
 
     let mailOptions = {
-        from: 'matyas.gulyas92@gmail.com',
+        from: 'guma.prog@gmail.com',
         to: data.userMail,
         subject: `Thank You for Your Purchase!! - Your NFT is on the way ;)`,
         text: `Dear ${data.firstName} ${data.familyName}!
