@@ -183,4 +183,12 @@ h2 {
   filter: drop-shadow(2px 5px 5px rgba(85, 85, 85, 0.445));
 }
 
+@media screen and (max-width: 600px) {
+  
+  nav a {
+    display: none;
+  }
+
+}
+
 /*# sourceMappingURL=output.css.map */
